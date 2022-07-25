@@ -72,7 +72,8 @@ section div {
 
 .section-img img {
     width: 28em;
-    padding: 2em;
+    margin: 2em;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
 }
 
 .col-section {
@@ -123,4 +124,14 @@ a {
 
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+.text-image {
+    height: 1.1em;
+    margin: 0;
+    vertical-align: top;
+}
+
+p img {
+    margin: 0.7em 0;
 }
