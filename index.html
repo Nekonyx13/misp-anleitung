@@ -5,6 +5,7 @@
     <title>MISP - Anleitung</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/print.css">
 </head>
 <body>
 <header class="topbar">
@@ -17,108 +18,289 @@
 </header>
 
 <div class="content">
-    <section class="col-section">
-        <div class="section-text">
-            <h1>Was ist MISP?</h1>
-            <p>
-                <a href="https://www.misp-project.org/">MISP</a> ist eine Open-Source-Plattform zum Sammeln,
-                Speichern, Verteilen und Sharing von Cybersicherheitsindikatoren und Cyberattacken.
-                MISP wurde von und für Cybersecurityspezialisten entwickelt, um deren tägliche Arbeit zu
-                unterstützen und strukturierte Informationen effizient zu teilen.
-            </p>
-        </div>
-        <section class="flex-wrap">
+    <div class="main-section">
+        <section class="col-section">
             <div class="section-text">
-                <h2>Communities</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et vehicula nisi. Duis ut libero
-                    sit amet lectus rhoncus aliquam. Praesent tincidunt justo turpis, pharetra elementum dolor
-                    tristique sit amet. Sed al</p>
+                <h1>Was ist MISP?</h1>
+                <p>
+                    <a href="https://www.misp-project.org/">MISP</a> ist eine Open-Source-Plattform zum Sammeln,
+                    Speichern, Verteilen und Sharing von Cybersicherheitsindikatoren und Cyberattacken.
+                    MISP wurde von und für Cybersecurityspezialisten entwickelt, um deren tägliche Arbeit zu
+                    unterstützen und strukturierte Informationen effizient zu teilen.
+                </p>
             </div>
+            <section class="flex-wrap">
+                <div class="section-text">
+                    <h2>Communities</h2>
+                    <p><span class="highlighted">Communities</span> sind Zusammenschlüsse mehrerer verbundener
+                        Organisationen, die Events
+                        miteinander teilen. Bei den meisten MISP-Communities muss man zuerst Zugriff beantragen, um mit
+                        seiner Organisation beizutreten. Sobald man Mitglied ist, kann man sämtliche Events der
+                        Community sehen und seine eigenen Events mit dieser teilen.</p>
+                </div>
+                <div class="section-text">
+                    <h2>Feeds</h2>
+                    <p><span class="highlighted">Feeds</span> sind eine Ansammlung von Events(Oft eine Liste an <a
+                            href="#ioc">Indicators</a>, die von
+                        anderen Organisationen zur Verfügung gestellt
+                        werden. Im Gegensatz zu Communities, muss man bei Feeds keinen Zugriff beantragen, um sie mit
+                        der eigenen MISP-Instanz zu synchronisieren. Nachdem man einen Feed hinzugefügt hat, werden sie
+                        regelmäßig automatisch aktualisiert.</p>
+                </div>
+                <div class="section-text">
+                    <h2 id="ioc">Indicators Of Compromise (IOCs)</h2>
+                    <p>Ein <span class="highlighted">Indicator of Compromise</span> ist ein Anzeichen, dass ein System
+                        kompromittiert ist. Das könnte z.B. eine verdächtigte IP-Adresse oder Domain sein, die bei einer
+                        Netzanalyse gefunden wird. Auch Dateinamen, Hashwerte, etc. zählen dazu.</p>
+                </div>
+                <div class="section-text">
+                    <h2>Events</h2>
+                    <p>Ein <span class="highlighted">Event</span> ist nichts anderes als ein Eintrag im MISP-System.
+                        Üblicherweise beschreibt es einen
+                        Vorfall (Malware) und alles Wissenswerte wird innerhalb des Events, meistens in Form von
+                        <a href="#attributes">Attributen</a> gesammelt. Oft werden Events jedoch auch als Auflistung von
+                        unabhängigen <a href="#ioc">IOCs</a> verwendet.</p>
+                </div>
+            </section>
+        </section>
+    </div>
+    <div class="main-section">
+        <section>
             <div class="section-text">
-                <h2>Feeds</h2>
-                <p>Nunc mollis tincidunt ante non consequat. Etiam vitae lectus tristique, porttitor diam hendrerit,
-                    molestie est. lectus rhoncus aliquam. Praesent tincidunt justo turpis, pharetra elementum dolor
-                    tristique sit amet.</p>
+                <h1>Anmeldung</h1>
+                <p>
+                    Das MISP System läuft lokal im Firmennetz der Axians. Die Weboberfläche ist über die Adresse
+                    <a class="bold" href="http://10.43.52.27">http://10.43.52.27</a> erreichbar.
+                </p>
+                <p class="weak-emphasis">
+                    Beachte: Du musst mit der VPN verbunden sein, um die Website zu erreichen.
+                </p>
+                <h2>Zugangsdaten</h2>
+                <p>
+                    Dein MISP Konto muss von einem Administrator manuell erstellt werden.
+                    Üblicherweise sind deine Zugangsdaten deine <span class="highlighted">@axians.at</span>
+                    E-Mail-Adresse, sowie dein <span class="highlighted">IAM-Passwort</span>.
+                </p>
+                <p>
+                    Nachdem du dich erfolgreich angemeldet hast, wirst du automatisch zur Liste aller Events
+                    weitergeleitet.
+                </p>
             </div>
-            <div class="section-text">
-                <h2>Indicators Of Compromise (IOCs)</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et vehicula nisi. Duis ut libero
-                    sit amet lectus rhoncus aliquam. Praesent tincidunt justo turpis, pharetra elementum dolor
-                    tristique sit amet.</p>
-            </div>
-            <div class="section-text">
-                <h2>Galaxies</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et vehicula nisi. Duis ut libero
-                    sit amet lectus rhoncus aliquam. Praesent tincidunt justo turpis, pharetra elementum dolor
-                    tristique sit amet.</p>
+            <div class="section-img">
+                <img src="media/screenshots/login_screen.png" style="width: 22em;">
             </div>
         </section>
-    </section>
-    <section>
-        <div class="section-text">
-            <h1>Anmeldung</h1>
-            <p>
-                Das MISP System läuft lokal im Firmennetz der Axians. Die Weboberfläche ist über die Adresse
-                <a class="bold" href="http://10.43.52.27">http://10.43.52.27</a> erreichbar.
-            </p>
-            <p class="weak-emphasis">
-                Beachte: Du musst mit der VPN verbunden sein, um die Website zu erreichen.
-            </p>
-            <h2>Zugangsdaten</h2>
-            <p>
-                Dein MISP Konto muss von einem Administrator manuell erstellt werden.
-                Üblicherweise sind deine Zugangsdaten deine <span class="highlighted">@axians.at</span>
-                E-Mail-Adresse, sowie dein <span class="highlighted">IAM-Passwort</span>.
-            </p>
-            <p>
-                Nachdem du dich erfolgreich angemeldet hast, wirst du automatisch zur Liste aller Events weitergeleitet.
-            </p>
-        </div>
-        <div class="section-img">
-            <img src="media/screenshots/login_screen.png" style="width: 22em;">
-        </div>
-    </section>
-    <section class="col-section">
-        <h1>List Events</h1>
-        <div class="section-img">
-            <img src="media/screenshots/list_events.png" style="width: 100%; margin-top: 0;">
-        </div>
-        <div class="section-text">
-            <p>
-                Die "List Events" Ansicht zeigt alle Events, die in MISP gespeichert sind. Diese können entweder aus
-                beigetretenen Feeds, Cosmmunities oder den lokalen Organisation kommen.
-            </p>
-            <p>
-                Wähle mit dem Kästchen <img src="media/screenshots/textimg_boxicon.png" class="text-image"> eines oder mehrere Event
-                aus, um sie zu <span class="highlighted">löschen</span> oder zu <span class="highlighted">exportieren</span> .
-            </p>
-            <p>Du kannst ein Event anzeigen lassen indem du entweder auf <span class="highlighted">Published</span> oder
-                <span class="highlighted">ID</span> klickst.
-                <br>
-                <img style="height: 4em" src="media/screenshots/textimg_view_event.png">
-            </p>
-        </div>
-    </section>
-    <section>
-        <div class="section-img">
-            <img src="media/screenshots/view_event.png" style="width: 32em; margin-top: 0;">
-        </div>
-        <div class="section-text">
-            <h1>Event View</h1>
-            <p>
-                Im Event View kannst du alle relevanten Informationen zu einem Event, wie z.B.
-            </p>
-            <p class="weak-emphasis">
-                Beachte: Du musst mit der VPN verbunden sein, um die Website zu erreichen.
-            </p>
-            <h2>Zugangsdaten</h2>
-            <p>
-                Dein MISP Konto muss von einem Administrator manuell erstellt werden.
-                Üblicherweise sind deine Zugangsdaten deine <span class="highlighted">@axians.at</span>
-                E-Mail-Adresse, sowie dein <span class="highlighted">IAM-Passwort</span>.
-            </p>
-        </div>
-    </section>
+    </div>
+    <div class="main-section">
+        <section class="col-section">
+            <h1 id="list-event">List Events</h1>
+            <div class="section-img">
+                <img src="media/screenshots/list_events.png" style="width: 100%; margin-top: 0;">
+            </div>
+            <div class="section-text">
+                <p>
+                    Die "List Events" Ansicht zeigt alle Events, die in MISP gespeichert sind. Diese können entweder aus
+                    beigetretenen Feeds, Cosmmunities oder den lokalen Organisation kommen.
+                </p>
+                <p>
+                    Wähle mit dem Kästchen <img src="media/screenshots/textimg_boxicon.png" class="text-image"> eines
+                    oder
+                    mehrere Event
+                    aus, um sie zu <span class="highlighted">löschen</span> oder zu <span
+                        class="highlighted">exportieren</span> .
+                </p>
+                <p>Du kannst ein Event anzeigen lassen indem du entweder auf <span class="highlighted">Published</span>
+                    oder
+                    <span class="highlighted">ID</span> klickst.
+                    <br>
+                    <img style="height: 4em" src="media/screenshots/textimg_view_event.png">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="main-section">
+        <section class="col-section">
+            <section>
+                <div class="section-img img-top img-left">
+                    <img src="media/screenshots/view_event.png" style="width: 30em;">
+                </div>
+                <div class="section-text">
+                    <h1>View Event</h1>
+                    <p>
+                        Im Event View werden alle Informationen aus der Listenansicht, mit ein paar weiteren Feldern,
+                        nochmal
+                        ausführlich aufgelistet. Weitaus interessanter ist hier aber die
+                        <span class="highlighted">Leiste</span> unten
+                        <br>
+                        <img style="width: 100%" src="media/screenshots/textimg_view_event_toggles.png">
+                        <br>
+
+                        mit der man weitere <span class="highlighted">Grafiken</span> einblenden kann, die mir
+                        viel mehr über ein Event (z.B. Funktionsweise, Zeitlinie, Vorfälle) sagen können.
+                    </p>
+                    <p class="weak-emphasis">
+                        Beachte: Wie aussagekräftig diese Darstellungen sind, ist von Event zu Event und je nach
+                        Anwendungsfall
+                        unterschiedlich.
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div class="section-text">
+                    <h2 id="galaxies">Galaxies/Cluster</h2>
+                    <p>
+                        <span class="highlighted">Galaxies</span> sind eine Art von Kategorisierung, um Events grob zu
+                        beschreiben. Man kann es damit vergleichen, Stichworte zu bestimmten Bereichen (Clustern)
+                        zuzuordnen.
+                        <br>
+                    </p>
+                    <figure>
+                        <img src="media/screenshots/galaxies_cluster.png" style="height: 12em;">
+                        <figcaption class="weak-emphasis">Von hier zu entnehmen: Die Attacke stammt von der "Turla
+                            Group".
+                            Sie
+                            ist
+                            auf Unternehmen gerichtet. Es werden interne E-Mails gestohlen. Die Attacke verwendet COM
+                            Hijacking
+                            als Exploit.
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <div class="section-text">
+                    <h2 id="attributes">Attributes</h2>
+                    <p>
+                        <span class="highlighted">Attribute</span> beinhalten die meisten und oft auch wichtigsten Daten
+                        zu
+                        einem Event. Hier werden so ziemlich alle restlichen Stücke an Information kollektiv gesammelt,
+                        darunter auch alle
+                        bekannten <a href="#ioc">Indicators of Compromise</a>.
+
+                        Mögliche Kategorien sind u.a.:
+                    </p>
+
+                    <ul class="flex-list">
+                        <li>
+                            <span class="highlighted">Network activity</span>
+                            <br>
+                            <p>
+                                Informationen über generierten Netzwerktraffic. Kann z.B. eine IP-Adresse, eine Domain,
+                                eine
+                                E-Mail-Adresse, usw. sein
+                            </p>
+                        </li>
+                        <li>
+                            <span class="highlighted">Payload delivery</span>
+                            <br>
+                            <p>
+                                Information, wie eine Malware ihren Payload überliefert. Kann z.B. ein Dateiname oder
+                                ein
+                                Hashwert sein
+                            </p>
+                        </li>
+                        <li>
+                            <span class="highlighted">Payload installation</span>
+                            <br>
+                            <p>
+                                Informationen, wo eine Malware auf einem System installiert wird.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="highlighted">External analysis</span>
+                            <br>
+                            <p>
+                                Meistens Links auf externe Quellen, die das Event betreffen. Oft Blog-Einträge oder
+                                News-Artikel um sich weiter in die Thematik einzulesen.
+                            </p>
+                    </ul>
+                </div>
+                <div class="section-img img-top img-right">
+                    <img src="media/screenshots/attributes.png" style="width: 32em;">
+                </div>
+            </section>
+            <section>
+                <div class="section-text">
+                    <h2 id="tags">Taxonomies/Tags</h2>
+                    <p>
+                        <span class="highlighted">Taxonomies</span> dienen zur Kategorisierung mit einem optionalen
+                        Wert. Man kann sie als Tag an ein Attribut oder Event hängen und können dazu dienen, mehrere
+                        Events indirekt miteinander zu verknüpfen. <span class="highlighted">Tags</span> alleine
+                        hingegegen bestehen nur aus einem Namen.
+                    </p>
+                </div>
+                <div class="section-img">
+                    <div class="gallery col-section no-shadow" style="width: 80%;">
+                        <img src="media/screenshots/taxonomies.png">
+                        <img src="media/screenshots/tags.png">
+                        <span class="caption weak-emphasis">Oben: Taxonomies<br>Unten: Tags</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-text">
+                    <h1>Event hinzufügen</h1>
+
+                    <p>Sollte ein Vorfall, der bis jetzt noch nicht in MISP eingetragen wurde, in deiner Organisation
+                        aufgetreten sein kannst du ein eigenes Event erstellen um deine Ergebnisse festzuhalten.</p>
+                    <p>
+
+                    <section>
+                        <div class="section-text">
+                            <p>
+                                Klicke dafür in der Navigation unter "Event Actions" auf <span class="highlighted">Add Event</span>
+                            </p>
+                        </div>
+                        <div class="section-img img-top">
+                            <img src="media/screenshots/textimg_addevent.png" style="width: 12em;">
+                        </div>
+                    </section>
+                    <section>
+                        <div class="section-text">
+                            <p>
+                                Danach kannst du sämtliche Eckdaten zu deinem Event angeben. Hier ein paar
+                                Erläuterungen:
+                            </p>
+                            <ul>
+                                <li>
+                                    <span class="highlighted">Distribution</span> - Mit welchen Organisationen das Event
+                                    geteilt wird.
+                                </li>
+                                <li>
+                                    <span class="highlighted">Analysis</span> - Analysestatus des Events.
+                                </li>
+                                <li>
+                                    <span class="highlighted">Extends Event</span> - Mit welchen bereits bestehenden
+                                    Events dieses zusammenhängt.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-img img-top">
+                            <img src="media/screenshots/add_event.png" style="width: 20em;">
+                        </div>
+                    </section>
+                    <section>
+                        <div class="section-text">
+                            <p>
+                                Nachdem du das Event erstellt hast, kannst du es dir anzeigen lassen und im Nachhinein
+                                weitere Daten wie <a href="#attributes">Attribute</a>, <a href="#tags">Tags</a> und <a
+                                        href="#galaxies">Galaxies</a> hinzufügen.
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="section-img img-top">
+                            <div class="gallery no-shadow" style="width: 40%">
+                                <img src="media/screenshots/add_misc.png" style="width: 5em;">
+                                <img src="media/screenshots/add_galaxies.png" style="width: 3em">
+                                <img src="media/screenshots/add_tags.png">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </div>
 </div>
 </body>
 </html>

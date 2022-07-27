@@ -1,0 +1,10 @@
+@media print {
+    .content {
+        max-width: none;
+        display: block;
+    }
+    .main-section {
+        display: block;
+        break-inside: avoid;
+    }
+}
