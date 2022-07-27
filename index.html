@@ -63,7 +63,7 @@
                 </div>
             </section>
         </section>
-    </div>
+    </div> <!-- Was ist MISP? -->
     <div class="main-section">
         <section>
             <div class="section-text">
@@ -79,7 +79,7 @@
                 <p>
                     Dein MISP Konto muss von einem Administrator manuell erstellt werden.
                     Üblicherweise sind deine Zugangsdaten deine <span class="highlighted">@axians.at</span>
-                    E-Mail-Adresse, sowie dein <span class="highlighted">IAM-Passwort</span>.
+                    E-Mail-Adresse, sowie "<span class="highlighted">Axians2022Axians!</span>" als Default-Passwort.
                 </p>
                 <p>
                     Nachdem du dich erfolgreich angemeldet hast, wirst du automatisch zur Liste aller Events
@@ -90,7 +90,7 @@
                 <img src="media/screenshots/login_screen.png" style="width: 22em;">
             </div>
         </section>
-    </div>
+    </div> <!-- Anmeldung -->
     <div class="main-section">
         <section class="col-section">
             <h1 id="list-event">List Events</h1>
@@ -100,14 +100,14 @@
             <div class="section-text">
                 <p>
                     Die "List Events" Ansicht zeigt alle Events, die in MISP gespeichert sind. Diese können entweder aus
-                    beigetretenen Feeds, Cosmmunities oder den lokalen Organisation kommen.
+                    beigetretenen Feeds, Communities oder den lokalen Organisationen kommen.
                 </p>
                 <p>
                     Wähle mit dem Kästchen <img src="media/screenshots/textimg_boxicon.png" class="text-image"> eines
                     oder
-                    mehrere Event
-                    aus, um sie zu <span class="highlighted">löschen</span> oder zu <span
-                        class="highlighted">exportieren</span> .
+                    mehrere Events
+                    aus, um sie zu <span class="highlighted">löschen</span> oder zu <a
+                        class="highlighted" href="#export">exportieren</a> .
                 </p>
                 <p>Du kannst ein Event anzeigen lassen indem du entweder auf <span class="highlighted">Published</span>
                     oder
@@ -117,7 +117,7 @@
                 </p>
             </div>
         </section>
-    </div>
+    </div> <!-- List Event -->
     <div class="main-section">
         <section class="col-section">
             <section>
@@ -125,7 +125,7 @@
                     <img src="media/screenshots/view_event.png" style="width: 30em;">
                 </div>
                 <div class="section-text">
-                    <h1>View Event</h1>
+                    <h1 id="view-event">View Event</h1>
                     <p>
                         Im Event View werden alle Informationen aus der Listenansicht, mit ein paar weiteren Feldern,
                         nochmal
@@ -226,7 +226,7 @@
                         <span class="highlighted">Taxonomies</span> dienen zur Kategorisierung mit einem optionalen
                         Wert. Man kann sie als Tag an ein Attribut oder Event hängen und können dazu dienen, mehrere
                         Events indirekt miteinander zu verknüpfen. <span class="highlighted">Tags</span> alleine
-                        hingegegen bestehen nur aus einem Namen.
+                        hingegen bestehen nur aus einem Namen.
                     </p>
                 </div>
                 <div class="section-img">
@@ -237,68 +237,156 @@
                     </div>
                 </div>
             </section>
+        </section>
+    </div> <!-- View Event -->
+    <div class="main-section">
+        <section>
+            <div class="section-text">
+                <h1>Event hinzufügen</h1>
 
-            <section>
-                <div class="section-text">
-                    <h1>Event hinzufügen</h1>
+                <p>Sollte ein Vorfall, der bis jetzt noch nicht in MISP eingetragen wurde, in deiner Organisation
+                    aufgetreten sein kannst du ein eigenes Event erstellen, um deine Ergebnisse festzuhalten.</p>
+                <p>
 
-                    <p>Sollte ein Vorfall, der bis jetzt noch nicht in MISP eingetragen wurde, in deiner Organisation
-                        aufgetreten sein kannst du ein eigenes Event erstellen um deine Ergebnisse festzuhalten.</p>
-                    <p>
-
-                    <section>
-                        <div class="section-text">
-                            <p>
-                                Klicke dafür in der Navigation unter "Event Actions" auf <span class="highlighted">Add Event</span>
-                            </p>
-                        </div>
-                        <div class="section-img img-top">
-                            <img src="media/screenshots/textimg_addevent.png" style="width: 12em;">
-                        </div>
-                    </section>
-                    <section>
-                        <div class="section-text">
-                            <p>
-                                Danach kannst du sämtliche Eckdaten zu deinem Event angeben. Hier ein paar
-                                Erläuterungen:
-                            </p>
-                            <ul>
-                                <li>
-                                    <span class="highlighted">Distribution</span> - Mit welchen Organisationen das Event
-                                    geteilt wird.
-                                </li>
-                                <li>
-                                    <span class="highlighted">Analysis</span> - Analysestatus des Events.
-                                </li>
-                                <li>
-                                    <span class="highlighted">Extends Event</span> - Mit welchen bereits bestehenden
-                                    Events dieses zusammenhängt.
-                                </li>
+                <section>
+                    <div class="section-text">
+                        <p>
+                            Klicke dafür in der Navigation unter "Event Actions" auf <span
+                                class="highlighted">Add Event</span>
+                        </p>
+                    </div>
+                    <div class="section-img img-top">
+                        <img src="media/screenshots/textimg_addevent.png" style="width: 16em;">
+                    </div>
+                </section>
+                <section>
+                    <div class="section-text">
+                        <p>
+                            Danach kannst du sämtliche Eckdaten zu deinem Event angeben. Hier ein paar
+                            Erläuterungen:
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="highlighted">Distribution</span> - Mit welchen Organisationen das Event
+                                geteilt wird.
+                            </li>
+                            <li>
+                                <span class="highlighted">Analysis</span> - Analysestatus des Events.
+                            </li>
+                            <li>
+                                <span class="highlighted">Extends Event</span> - Mit welchen bereits bestehenden
+                                Events dieses Event zusammenhängt.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section-img img-top">
+                        <img src="media/screenshots/add_event.png" style="width: 20em;">
+                    </div>
+                </section>
+                <section>
+                    <div class="section-text">
+                        <p>
+                            Nachdem du das Event erstellt hast, kannst du es dir anzeigen lassen und im Nachhinein
+                            weitere Daten wie <a href="#attributes">Attribute</a>, <a href="#tags">Tags</a> und <a
+                                href="#galaxies">Galaxies</a> hinzufügen.
                             </ul>
+                        </p>
+                    </div>
+                    <div class="section-img img-top">
+                        <div class="gallery no-shadow" style="width: 40%">
+                            <img src="media/screenshots/add_misc.png" style="width: 5em;">
+                            <img src="media/screenshots/add_galaxies.png" style="width: 3em">
+                            <img src="media/screenshots/add_tags.png">
                         </div>
-                        <div class="section-img img-top">
-                            <img src="media/screenshots/add_event.png" style="width: 20em;">
-                        </div>
-                    </section>
-                    <section>
-                        <div class="section-text">
-                            <p>
-                                Nachdem du das Event erstellt hast, kannst du es dir anzeigen lassen und im Nachhinein
-                                weitere Daten wie <a href="#attributes">Attribute</a>, <a href="#tags">Tags</a> und <a
-                                        href="#galaxies">Galaxies</a> hinzufügen.
-                            </ul>
-                            </p>
-                        </div>
-                        <div class="section-img img-top">
-                            <div class="gallery no-shadow" style="width: 40%">
-                                <img src="media/screenshots/add_misc.png" style="width: 5em;">
-                                <img src="media/screenshots/add_galaxies.png" style="width: 3em">
-                                <img src="media/screenshots/add_tags.png">
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </section>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div> <!-- Event hinzufügen -->
+    <div class="main-section">
+        <section>
+            <div class="section-text">
+                <h1>Suchfunktion</h1>
+                <p>
+                    In MISP gibt es grundsätzlich <span class="highlighted">zwei Möglichkeiten</span>, alle Events zu
+                    durchsuchen:
+                </p>
+                <section>
+                    <div class="section-img img-top img-left">
+                        <img src="media/screenshots/search1.png" style="width: 25em;">
+                    </div>
+                    <div class="section-text">
+                        <p>Eine generelle Suche, die alle Felder eines Events abdeckt. Du findest sie in der <a
+                                href="#list-event">List
+                            Event</a> Ansicht und kannst im <span class="highlighted">Dropdown</span> neben der
+                            Suchleiste festlegen, was genau durchsucht werden soll. Als Ergebnis bekommst du eine Liste
+                            von Events, auf die die Suche zutrifft.</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="section-img img-top img-left">
+                        <img src="media/screenshots/search_attributes.png" style="width: 25em;">
+                    </div>
+                    <div class="section-text">
+                        <p>
+                            Und eine Suche, die nur nach Attributen sucht. Man kann nach Datum, bestimmten Events, Tags
+                            und vielem mehr Filtern. Du findest sie unter "<span
+                                class="highlighted">Event Actions</span>" bei <span class="highlighted">Search Attributes</span>
+                            Als Ergebnis bekommst du eine Liste an zutreffenden Attributen,
+                            ggf. aus verschiedenen Events.
+                        </p>
+                        <span class="weak-emphasis">Folgendes ist bei der Textsuche zu beachten:</span>
+                        <p class="weak-emphasis">"For the value, event ID and organisation, you can enter several search
+                            terms by entering
+                            each term as a new line. To exclude things from a result, use the NOT operator (!) in front
+                            of the term.
+                            For string searches (such as searching for an expression, tags, etc) - lookups are simple
+                            string matches. If you want a substring match encapsulate the lookup string between "%"
+                            characters."</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div> <!-- Suchfunktion -->
+    <div class="main-section"> <!-- Export -->
+        <section>
+            <div class="section-text">
+                <h1 id="export">Export</h1>
+                <p>
+                    MISP bietet verschiedene Möglichkeiten an, Daten und insbesondere Events zu exportieren.
+                </p>
+
+            </div>
+        </section>
+        <section>
+            <div class="section-text">
+                <h2>Aus der Eventliste</h2>
+                <p>Wie <a href="#list-event">oben</a> bereits erwähnt, kann man in der <span class="highlighted">List Event</span>
+                    Ansicht ausgewählte Events einfach <img class="text-image"
+                                                            src="media/screenshots/textimg_deleteorexport.png">
+                    exportieren.+
+                </p>
+                <img src="media/screenshots/export_events.png" style="width: 28em;">
+                <p>Anschließend kannst du aus zahlreichen Formaten auswählen, darunter
+                    <span class="highlighted">JSON, XML, CSV, SNORT, YARA, STIX, TXT, ...</span>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="section-text">
+                <h2>Aus einem Event</h2>
+                <p>
+                    In der <a href="#view-event">Eventansicht</a> kannst du ein einzelnes Event exportieren. Wähle dafür
+                    unter "Event Actions" oder in der Sidebar <span class="highlighted">Download as...</span>
+                </p>
+                <p>
+                    Hier kannst du wie bei mehreren Events aus den wichtigsten Formaten (<span class="highlighted">JSON, XML, CSV, SNORT, YARA, STIX, TXT, ...</span>)
+                    auswählen und zusätzlich noch anpassen, ob z.B. Dateianhänge mitgeliefert werden sollen.
+                </p>
+            </div>
+            <div class="section-img img-top">
+                <img src="media/screenshots/export_event.png" style="width: 30em;">
+            </div>
         </section>
     </div>
 </div>
